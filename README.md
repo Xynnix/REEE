@@ -1,19 +1,31 @@
 -----------------------------------------------------
 
-### create a new repository on the command line
+### Install Python 3.8.7
 ```shell
-echo "# REEE" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Xynnix/REEE.git
-git push -u origin main
+# Step 1 – Prerequisite
+sudo apt-get install build-essential checkinstall -y
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev \
+    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev -y
+
+#Step 2 – Download Python 3.8
+cd /opt
+sudo wget https://www.python.org/ftp/python/3.8.7/Python-3.8.7.tgz
+sudo tar xzf Python-3.8.7.tgz
+
+# Step 3 – Compile Python Source
+cd Python-3.8.7
+sudo ./configure --enable-optimizations
+sudo make altinstall
+
+# Step 4 – Check Python Version
+python3.8 -V
+
+# Step 5 – Remove Python
+cd /opt
+sudo rm -f Python-3.8.7.tgz
 ```
 -----------------------------------------------------
-### ...or push an existing repository from the command line
+### Install NodeJS-NPM
 ```shell
-git remote add origin https://github.com/Xynnix/REEE.git
-git branch -M main
-git push -u origin main
+# Step 1 – Prerequisite 
 ```
